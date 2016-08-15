@@ -1,0 +1,284 @@
+//
+// @name Article
+// @description A full article with heading, lead and body text
+//
+// @page Typography/Article
+//
+// @markup
+// <article>
+//      <h1>Candy tootsie roll cookie</h1>
+//      <p class="lead">Dragée I love macaroon jelly-o I love. Soufflé I love I love I love. Cotton candy sugar plum caramels. Soufflé halvah sweet. Wafer jujubes dessert tart donut cookie chupa chups croissant. Jelly jujubes fruitcake tart danish sesame snaps pie dessert.</p>
+//      <p>Dessert dessert I love powder sweet fruitcake soufflé bonbon. I love jelly beans carrot cake chupa chups lemon drops croissant lemon drops. I love cheesecake brownie oat cake topping candy canes caramels. Lemon drops bonbon gingerbread pastry I love dessert jujubes caramels ice cream. Topping sugar plum cookie tiramisu I love I love powder. Tiramisu bear claw candy cotton candy croissant macaroon bear claw. Chocolate bar cupcake halvah gummi bears I love.</p>
+//      <p>Sesame snaps bonbon fruitcake dragée pastry. Caramels icing cake lollipop donut liquorice. Sweet roll pudding gingerbread apple pie cheesecake I love caramels chocolate bar. Cheesecake apple pie muffin cake toffee lemon drops apple pie. Danish oat cake pastry sugar plum jelly chocolate bar pastry pudding. Sesame snaps jujubes soufflé liquorice cake.</p>
+//      <p>Cupcake marzipan biscuit cupcake chocolate cake. I love muffin sweet. Cake sweet roll donut dragée sesame snaps I love.</p>
+// </article>
+//
+
+article {
+
+	margin-bottom: $content-gutter;
+
+	> h1:first-child {
+		margin-top: -0.25em;
+
+		img + & {
+			margin-top: 0;
+		}
+
+		@media print {
+			border-bottom: 2px solid #000;
+			padding-bottom: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	strong,
+	b {
+		font-weight: bold;
+	}
+
+	p + h1,
+	p + h2,
+	p + h3,
+	p + h4,
+	p + h5,
+	p + h6,
+	p + p,
+	p + ol,
+	p + ul,
+	p + blockquote,
+	p + pre,
+	p + img,
+	p + .box,
+	p + .dataTables_wrapper,
+	p + .wp-caption,
+
+	ol + h1,
+	ol + h2,
+	ol + h3,
+	ol + h4,
+	ol + h5,
+	ol + h6,
+	ol + p,
+	ol + ol,
+	ol + ul,
+	ol + blockquote,
+	ol + pre,
+	ol + img,
+	ol + .box,
+	ol + .dataTables_wrapper,
+	ol + .wp-caption,
+
+	ul + h1,
+	ul + h2,
+	ul + h3,
+	ul + h4,
+	ul + h5,
+	ul + h6,
+	ul + p,
+	ul + ol,
+	ul + ul,
+	ul + blockquote,
+	ul + pre,
+	ul + img,
+	ul + .box,
+	ul + .dataTables_wrapper,
+	ul + .wp-caption,
+
+	blockquote + h1,
+	blockquote + h2,
+	blockquote + h3,
+	blockquote + h4,
+	blockquote + h5,
+	blockquote + h6,
+	blockquote + p,
+	blockquote + ol,
+	blockquote + ul,
+	blockquote + blockquote,
+	blockquote + pre,
+	blockquote + img,
+	blockquote + .box,
+	blockquote + .dataTables_wrapper,
+	blockquote + .wp-caption,
+
+	.wp-caption + h1,
+	.wp-caption + h2,
+	.wp-caption + h3,
+	.wp-caption + h4,
+	.wp-caption + h5,
+	.wp-caption + h6,
+	.wp-caption + p,
+	.wp-caption + ol,
+	.wp-caption + ul,
+	.wp-caption + blockquote,
+	.wp-caption + pre,
+	.wp-caption + img,
+	.wp-caption + .box,
+	.wp-caption + .dataTables_wrapper,
+
+	pre + h1,
+	pre + h2,
+	pre + h3,
+	pre + h4,
+	pre + h5,
+	pre + h6,
+	pre + p,
+	pre + ol,
+	pre + ul,
+	pre + blockquote,
+	pre + pre,
+	pre + img,
+	pre + .box,
+	pre + .dataTables_wrapper,
+	pre + .wp-caption,
+
+	img + h1,
+	img + h2,
+	img + h3,
+	img + h4,
+	img + h5,
+	img + h6,
+	img + p,
+	img + ol,
+	img + ul,
+	img + blockquote,
+	img + pre,
+	img + img,
+	img + .box,
+	img + .dataTables_wrapper,
+	img + .wp-caption,
+
+	.box + h1,
+	.box + h2,
+	.box + h3,
+	.box + h4,
+	.box + h5,
+	.box + h6,
+	.box + p,
+	.box + ol,
+	.box + ul,
+	.box + blockquote,
+	.box + pre,
+	.box + img,
+	.box + .box,
+	.box + .dataTables_wrapper,
+	.box + .wp-caption,
+
+	.dataTables_wrapper + h1,
+	.dataTables_wrapper + h2,
+	.dataTables_wrapper + h3,
+	.dataTables_wrapper + h4,
+	.dataTables_wrapper + h5,
+	.dataTables_wrapper + h6,
+	.dataTables_wrapper + p,
+	.dataTables_wrapper + ol,
+	.dataTables_wrapper + ul,
+	.dataTables_wrapper + blockquote,
+	.dataTables_wrapper + pre,
+	.dataTables_wrapper + img,
+	.dataTables_wrapper + .box,
+	.dataTables_wrapper + .dataTables_wrapper,
+	.dataTables_wrapper + .wp-caption,
+	{
+		margin-top: 1.3em;
+	}
+
+	hr + h1,
+	hr + h2,
+	hr + h3,
+	hr + h4,
+	hr + h5,
+	hr + h6,
+	hr + p,
+	hr + ol,
+	hr + ul,
+	hr + blockquote,
+	hr + pre,
+	hr + hr,
+	hr + img,
+	hr + .wp-caption,
+
+	h1 + hr,
+	h2 + hr,
+	h3 + hr,
+	h4 + hr,
+	h5 + hr,
+	h6 + hr,
+	p + hr,
+	ol + hr,
+	ul + hr,
+	blockquote + hr,
+	pre + hr,
+	img + hr,
+	.wp-caption + hr {
+		margin-top: 2em;
+	}
+
+	blockquote {
+		border-left: 3px solid $creamy-darker;
+		margin-bottom: $content-gutter;
+		padding: 20px 35px;
+		quotes: "\201C""\201D""\2018""\2019";
+	}
+
+	blockquote:before {
+		color: $gray;
+		content: open-quote;
+		font-size: 2em;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	}
+
+	blockquote:after {
+		color: $gray;
+		content: close-quote;
+		font-size: 2em;
+		line-height: 0.1em;
+		margin-left: 0.25em;
+		vertical-align: -0.4em;
+	}
+
+	blockquote p {
+		display: inline;
+		margin: 0;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	@media print {
+		a::after {
+			display: inline;
+			content: " (" attr(href) ")";
+			color: #999;
+			font-size: .8em;
+			word-break: break-all;
+			text-decoration: none;
+		}
+	}
+
+	p, h1, h2, h3, h4, h5, h6, li, .wp-caption {
+		max-width: 700px;
+	}
+
+}
+
+hr {
+	position: relative;
+	height: 4px;
+	border-radius: 4px;
+	background-color: $creamy-darker;
+	border: none;
+}
+
+article + .page-footer {
+	margin-top: $content-gutter * 2;
+}
+
+.page-footer {
+	font-size: .9em;
+}

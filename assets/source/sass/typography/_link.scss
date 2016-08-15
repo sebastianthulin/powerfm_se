@@ -1,0 +1,36 @@
+a {
+    color: $palette-gray-4;
+    text-decoration: none;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                color: map-get($color, fourth);
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+[class*="theme-"] article a:not([class]),
+[class*="theme-"] article a.link-item {
+    color: $palette-blue-2;
+    text-decoration: underline;
+
+    &:hover{
+        color: $palette-blue-5;
+    }
+
+    &:visited {
+        color: $palette-purple-2;
+
+        &:hover {
+            color: $palette-purple-5;
+        }
+    }
+}

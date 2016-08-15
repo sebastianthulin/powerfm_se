@@ -1,0 +1,27 @@
+.logotype {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 1;
+    font-size: 50px;
+    text-transform: uppercase;
+    user-select: none;
+
+    span {
+        display: block;
+        padding: .3em .4em;
+        float: left;
+        color: #fff;
+        font-weight: 400;
+        box-shadow: inset 0 0 1em rgba(#000,.2);
+
+        &:first-child {
+            background: #303030;
+        }
+
+        &:last-child {
+            background-color: #ff0064;
+            @include gradient(#ff0064, #f1005e);
+        }
+    }
+}

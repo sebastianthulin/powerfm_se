@@ -1,0 +1,28 @@
+nav {
+    ul {
+        overflow: hidden;
+        li {
+            width: 20%;
+            display: block;
+            float: left;
+            line-height: 1.3;
+
+            a {
+                text-align: center;
+                display: block;
+                text-transform: uppercase;
+                color: #fff;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                i {
+                    display: block;
+                    clear: both;
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}

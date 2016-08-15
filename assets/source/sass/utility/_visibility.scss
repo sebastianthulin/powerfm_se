@@ -1,0 +1,74 @@
+//
+// @name Visibility
+// @description Hides any elements for the specified screen size
+//
+// @page Utilities/Visibility
+//
+// @state .hidden 	 - Hidden on all sizes
+// @state .hidden-xs - Hidden on extra small screens
+// @state .hidden-sm - Hidden on small screens
+// @state .hidden-md - Hidden on medium screens
+// @state .hidden-lg - Hidden on large screens
+// @state .hidden-print - Hidden in print
+// @state .print-only - Display only in print
+//
+
+.hidden {
+	display: none !important;
+}
+
+.hidden-xs {
+	@media screen and #{$screen-xs} {
+		display: none !important;
+	}
+}
+
+.hidden-sm {
+	@media screen and #{$screen-sm} {
+		display: none !important;
+	}
+}
+
+.hidden-md {
+	@media screen and #{$screen-md} {
+		display: none !important;
+	}
+}
+
+.hidden-lg {
+	@media screen and #{$screen-lg} {
+		display: none !important;
+	}
+}
+
+.block-level {
+	display: block;
+}
+
+.target-toggle {
+	display: none;
+
+	&:target {
+		display: block;
+	}
+}
+
+
+.print-only {
+	display: none;
+}
+
+@media print {
+	.hidden-print {
+		display: none;
+	}
+
+	.print-only {
+		display: block !important;
+	}
+
+	.print-grow {
+		flex: 1 1 auto;
+		max-width: 100%;
+	}
+}

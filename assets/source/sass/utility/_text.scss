@@ -1,0 +1,293 @@
+//
+// @name Text alignment
+// @description Aligns text.
+//
+// @page Typography/Text alignment
+//
+// @markup
+// <div class="text-left">Left aligned text</div>
+// <div class="text-center">Center aligned text</div>
+// <div class="text-right">Right aligned text</div>
+// <div class="text-justify">Justified text</div>
+//
+
+.text-left {
+    text-align: left;
+}
+
+    @media screen and #{$screen-xs} {
+        .text-left-xs {
+            text-align: left;
+        }
+    }
+
+    @media screen and #{$screen-sm} {
+        .text-left-sm {
+            text-align: left;
+        }
+    }
+
+    @media screen and #{$screen-md} {
+        .text-left-md {
+            text-align: left;
+        }
+    }
+
+    @media screen and #{$screen-lg} {
+        .text-left-lg {
+            text-align: left;
+        }
+    }
+
+.text-right {
+    text-align: right;
+}
+
+    @media screen and #{$screen-xs} {
+        .text-right-xs {
+            text-align: right;
+        }
+    }
+
+    @media screen and #{$screen-sm} {
+        .text-right-sm {
+            text-align: right;
+        }
+    }
+
+    @media screen and #{$screen-md} {
+        .text-right-md {
+            text-align: right;
+        }
+    }
+
+    @media screen and #{$screen-lg} {
+        .text-right-lg {
+            text-align: right;
+        }
+    }
+
+.text-center {
+    text-align: center;
+}
+
+    @media screen and #{$screen-xs} {
+        .text-center-xs {
+            text-align: center;
+        }
+    }
+
+    @media screen and #{$screen-sm} {
+        .text-center-sm {
+            text-align: center;
+        }
+    }
+
+    @media screen and #{$screen-md} {
+        .text-center-md {
+            text-align: center;
+        }
+    }
+
+    @media screen and #{$screen-lg} {
+        .text-center-lg {
+            text-align: center;
+        }
+    }
+
+.text-justify {
+    text-align: justify;
+}
+
+    @media screen and #{$screen-xs} {
+        .text-justify-xs {
+            text-align: justify;
+        }
+    }
+
+    @media screen and #{$screen-sm} {
+        .text-justify-sm {
+            text-align: justify;
+        }
+    }
+
+    @media screen and #{$screen-md} {
+        .text-justify-md {
+            text-align: justify;
+        }
+    }
+
+    @media screen and #{$screen-lg} {
+        .text-justify-lg {
+            text-align: justify;
+        }
+    }
+
+//
+// @name Front size
+// @description Font size
+//
+// @page Typography/Font size
+//
+// @state .text-sm - Small
+// @state .text-md - Medium (default)
+// @state .text-lg - Large
+// @state .text-xl - Extra Large
+//
+// @markup
+// <div class="text-left">Left aligned text</div>
+//
+
+.text-sm {
+    font-size: .8em;
+}
+
+.text-md {
+    font-size: 1em;
+}
+
+.text-lg {
+    font-size: 1.1em;
+}
+
+.text-xl {
+    font-size: 1.5em;
+}
+
+//
+// @name Highlight
+// @description Highlights text.
+//
+// @page Typography/Highlight
+//
+// @markup
+// <span class="text-highlight">Highlighted</span>
+//
+.text-highlight {
+    color: $palette-gray-2;
+
+    // Color theme styles
+    @if ($includeThemes == true) {
+        @each $theme, $color in $themes {
+            .theme-#{$theme} & {
+                color: map-get($color, second);
+            }
+        }
+    }
+}
+
+//
+// @name Text color
+// @description Modifiers to set the text color
+//
+// @page Typography/Text color
+//
+// @state .text-dark-gray - Dark gray text color
+//
+// @markup
+// <span class="text-dark-gray">Dark gray</span>
+//
+
+.text-dark-gray {
+    color: $gray-dark;
+}
+
+//
+// @name Underline
+// @description Underlines text.
+//
+// @page Typography/Underline
+//
+// @markup
+// <span class="text-underline">Underlined</span>
+//
+.text-underline {
+    text-decoration: underline;
+}
+
+//
+// @name Text transform
+// @description Transforms text
+//
+// @page Typography/Text transform
+//
+// @markup
+// <span class="text-uppercase">Underlined</span>
+// <span class="text-lowercase">Underlined</span>
+// <span class="text-capitalize">Underlined</span>
+//
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+//
+// @name Mark
+// @description Mark text to make it stand out.
+//
+// @page Typography/Mark
+//
+// @state .mark-yellow - Mark with yellow color
+// @state .mark-blue - Mark with blue color
+// @state .mark-green - Mark with green color
+// @state .mark-red - Mark with red color
+// @state .mark-purple - Mark with purple color
+//
+// @markup
+// One of the words in this sentence is <mark>marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-yellow">marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-blue">marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-green">marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-red">marked</mark>.<br>
+// One of the words in this sentence is <mark class="mark-purple">marked</mark>.
+//
+mark {
+    background-color: $creamy-darker;
+    padding: $mark-padding;
+}
+
+.mark-yellow {
+    background-color: $mark-yellow;
+    padding: $mark-padding;
+}
+
+.mark-blue {
+    background-color: $mark-blue;
+    padding: $mark-padding;
+}
+
+.mark-green {
+    background-color: $mark-green;
+    padding: $mark-padding;
+}
+
+.mark-red {
+    background-color: $mark-red;
+    padding: $mark-padding;
+}
+
+.mark-purple {
+    background-color: $mark-purple;
+    padding: $mark-padding;
+}
+
+//
+// @name Small
+// @description Small text. Can be used with the <code>&lt;small&gt;</code> element or by applying the <code>.small</code> class to any element.
+//
+// @page Typography/Small
+//
+// @markup
+// <small>This is a small text</small>
+//
+small,
+.small {
+    font-size: .8em !important;
+}
