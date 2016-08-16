@@ -11,26 +11,31 @@
 // *** 2. Base typography
 // ***************************************************************
 body {
-    @include gradient(rgba(#000,.6),rgba(#000,0));
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $base-font-color;
-    min-height: 100vh;
-    z-index: 10;
-    position: relative;
 }
 
+// ***************************************************************
+// *** 3. Base background definitions
+// ***************************************************************
 html {
     z-index: 5;
-}
 
-html:before {
-    @include cover();
-    content: '';
-    filter: grayscale(70%);
-    background: url('https://hd.unsplash.com/photo-1429962714451-bb934ecdc4ec') center no-repeat;
-    background-size: cover;
+    &:before {
+        @include cover();
+        filter: grayscale(70%);
+        background: url('https://hd.unsplash.com/photo-1429962714451-bb934ecdc4ec') center no-repeat;
+        background-size: cover;
+        content: '';
+    }
+
+    body {
+        min-height: 100vh;
+        z-index: 10;
+        position: relative;
+    }
 }
 
 strong,
@@ -40,8 +45,4 @@ b {
 
 .overflow-hidden {
 	overflow: hidden;
-}
-
-header {
-    padding: 40px 0 0 0;
 }
