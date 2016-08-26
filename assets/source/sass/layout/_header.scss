@@ -1,5 +1,13 @@
 
 header {
-    @include gradient(rgba(#000,.6),rgba(#000,0));
-    padding: 40px 0;
+    @include gradient(rgba(#000,.9),rgba(#000,0));
+    padding: 40px 0 80px 0;
+
+    .logotype {
+        display: inline-block;
+        img {
+            @include material-shadow;
+            @include material-radius;
+        }
+    }
 }

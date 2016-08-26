@@ -22,17 +22,25 @@ body {
 // ***************************************************************
 html {
     z-index: 5;
+    height: 100vh;
 
     &:before {
         @include cover();
-        filter: grayscale(70%);
+        filter: grayscale(70%) blur(5px);
         background: url('https://hd.unsplash.com/photo-1429962714451-bb934ecdc4ec') center no-repeat;
         background-size: cover;
         content: '';
     }
 
+    &:after {
+        @include cover();
+        background: url('../images/bg.svg') center;
+        background-size: cover;
+        content: '';
+    }
+
     body {
-        min-height: 100vh;
+        height: 100vh;
         z-index: 10;
         position: relative;
     }
