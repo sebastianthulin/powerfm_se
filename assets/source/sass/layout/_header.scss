@@ -1,13 +1,21 @@
-
 header {
     @include gradient(rgba(#000,.9),rgba(#000,0));
     padding: 40px 0 80px 0;
+    margin-bottom: -40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 
     .logotype {
         display: inline-block;
-        img {
+        img, svg {
             @include material-shadow;
             @include material-radius;
+            transition: opacity 150ms;
+            &:hover {
+                opacity: .7;
+            }
         }
     }
 }
