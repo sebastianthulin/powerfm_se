@@ -39,12 +39,13 @@ Radio.Player = Radio.Player || {};
 //Component
 Radio.Player.Player = (function ($) {
 
-    var playerElement = jQuery("#player");
-    var audioElement = jQuery("#player #audio-player");
+    var playerElement = null;
+    var audioElement = null;
 
     function Player() {
         jQuery(function(){
-
+            audioElement    = jQuery("#player #audio-player");
+            playerElement   = jQuery("#player");
         }.bind(this));
         this.init();
         console.log("player");
